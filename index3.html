@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyslexia Page</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: #E8E2FF;
+            background-size: cover;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgb(11, 10, 11);
+            color: white;
+            padding: 15px 35px;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 20px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav {
+            text-align: right;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.4s ease;
+        }
+
+        nav ul li a:hover {
+            color: #666;
+        }
+
+        .intro-container {
+            text-align: center;
+            margin: -50px auto; /* Adjusted margin to move the box up */
+            padding: 20px;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .quiz-button:hover {
+            background-color: #2980b9;
+            width: 100%;
+        }
+
+        #myVideo {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+
+    <h1>DYSLEXIA</h1>
+
+    <div class="intro-container">
+        <video id="myVideo" controls>
+            <source src="{{ url_for('static', filename='dyslexia.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="quiz-button" onclick="takeQuiz()">Take Quiz</button>
+    </div>
+
+    <script>
+        function takeQuiz() {
+            var quizUrl = "{{ url_for('quiz1') }}";
+            window.location.href = quizUrl;
+        }
+    </script>
+</body>
+
+</html>

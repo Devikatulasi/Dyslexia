@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('/static/BACKGROUND.jpg');
+            background-size: cover;
+
+            color: #fff; /* Set text color to white */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Verdana', sans-serif; /* Change the font for the heading */
+            color: black;
+            margin-top: 50px; /* Adjust as needed */
+        }
+        #result-container {
+            width: 80%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+            margin-right: 100px; /* Use a negative value to move it to the right */
+            pointer-events: none;
+        }
+
+
+
+
+        p {
+            margin: 15px ; /* Increased margin for better spacing */
+            line-height: 1.6; /* Adjusted line height for better readability */
+            font-size: 18px; /* Increased font size for better visibility */
+            color: #ddd;
+            font-family: 'Times New Roman';
+
+        }
+
+        h1 {
+            margin-top: 30px; /* Adjusted margin for the heading */
+        }
+
+        /* Add hover effect to the result container */
+        #result-container:hover {
+            background-color: rgba(0, 0, 0, 0.9); /* Slightly darker background on hover */
+        }
+
+
+
+
+        /* Style the result container on larger screens */
+        @media screen and (min-width: 768px) {
+            #result-container {
+                margin: 20px auto;
+            }
+        }
+
+        /* Add a subtle hover effect to paragraphs */
+        p:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quiz Results</h1>
+
+    <div id="result-container">
+        <p>Language Vocabulary Score :- {{ lang_vocb_score }}</p>
+
+        <p>Memory Score :- {{ memory_score }}</p>
+
+        <p>Speed Score :- {{ speed_score }}</p>
+
+        <p>Visual Score :- {{ visual_score }}</p>
+
+        <p>Audio Score :- {{ audio_score }}</p>
+
+        <p>Survey Score :- {{ total_score }}</p>
+
+        <p>Prediction Result :- {{ result }}</p>
+    </div>
+
+</body>
+</html>
