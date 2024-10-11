@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyslexia Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background: url('/static/background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .compact-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-group label, .form-control {
+            font-size: 20px;
+            width: 120%;
+            margin: 0;
+            color: black; /* Set text color to blue */
+        }
+
+        .result {
+            font-size: 40px;
+            color: black; /* Set text color to blue */
+            width: 55%;
+            height: 20%;
+            border: 2px solid black;
+            padding: 10px;
+            display: inline-block;
+            position: absolute;
+            top: 200px;
+            right: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="text-center" style="font-weight: bold; color: black;">Dyslexia</h1>
+
+<div class="container mt-2 compact-container">
+    <div class="row">
+        <div class="col-md-3">
+            <h2 class="text-center" style="color: purple; padding:20x">Enter Scores </h2>
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="lang_vocab">lang_vocab</label>
+                    <input type="number" class="form-control" name="lang_vocab" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="memory">memory</label>
+                    <input type="number" class="form-control" name="memory" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="speed">speed</label>
+                    <input type="number" class="form-control" name="speed" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="visual">visual</label>
+                    <input type="number" class="form-control" name="visual" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="audio">audio</label>
+                    <input type="number" class="form-control" name="audio" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="survey">survey</label>
+                    <input type="number" class="form-control" name="survey" step="any">
+                </div>
+
+                <button type="submit" class="btn btn-danger btn-sm mt-2">Predict</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 compact-container">
+    <div class="row">
+        <div class="text-center">
+            {% if result %}
+            <div class="result">
+                <h3 class="text-center">
+                    Result:<br>
+                    <span style="color: white;">{{result}}</span>
+                </h3>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

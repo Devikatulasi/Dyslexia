@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+
+        body{
+
+        background-color: #9F8BFF;
+            background-size: cover;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+
+        header {
+            background-color:rgb(11, 10, 11);
+            color: white;
+            padding: 15px 35px;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 20px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav {
+        text-align: right;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.4s ease;
+        }
+
+        nav ul li a:hover {
+            color: #666;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+
+        .intro-container {
+
+            text-align: center;
+            margin: 100px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size:medium;
+            background-color: #E8E2FF;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li:before {
+            content: '\2022'; /* Unicode character for a bullet point */
+            color: black; /* You can change the color if needed */
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="{{ url_for('start') }}">DYSLEXIA PREDICTOR</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('start') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="content-container">
+        <h1>Welcome to Dyslexia Predictor</h1>
+
+        <section id="introduction">
+            <h3>Introduction</h3>
+            <p>Our dyslexia predictor project assesses users through a quiz covering language, vocabulary, memory, visual, and audio questions.</p>
+            <p>The goal is to provide insights into various cognitive skills through an ML algorithm.</p>
+        </section>
+
+        <section id="quiz">
+            <h3>Take the Quiz</h3>
+            <h4><b>Purpose:</b></h4>
+            <ul>
+                <li>Discover insights into cognitive skills through questions covering:</li>
+                <ul>
+                    <li>Language and Vocabulary</li>
+                    <br>
+                    <li>Memory</li>
+                    <br>
+                    <li>Visual Images</li>
+                    <br>
+                    <li>Audio</li>
+                </ul>
+            <h4><b>Instructions:</b></h4>
+                <ul>
+                    <li>Answer questions honestly for accurate results.</li>
+                    <br>
+                    <li>Questions will assess various aspects of language, memory, visual, and audio skills.</li>
+                </ul>
+            <h4><b>Start Quiz:</b></h4>
+                <p>Click the "Quiz" button to begin the assessment.</p>
+            </ul>
+        </section>
+
+        <section id="quiz-sections">
+            <h3>Quiz Sections</h3>
+            <ul>
+                <li><b>Language and Vocabulary:</b></li>
+                <p>Questions assessing language proficiency and vocabulary skills.</p>
+                <li><b>Memory:</b></li>
+                <p>Questions evaluating memory retention and recall abilities.</p>
+                <li><b>Visual Images:</b></li>
+                <p>Assessments related to processing and interpreting visual information.</p>
+                <li><b>Audio:</b></li>
+                <p>Questions evaluating the understanding of auditory information.</p>
+            </ul>
+        </section>
+
+        <section id="navigation">
+            <h3>Navigation</h3>
+            <p><b>Menu:</b></p>
+            <p>Access different sections:</p>
+            <ul>
+                <li>"Quiz" directs to the quiz section.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h3>Conclusion</h3>
+            <p><b>Empowering Users:</b></p>
+            <p>By participating in the quiz, users gain insights into various cognitive skills.</p>
+
+
+    </div>
+
+</body>
+</html>

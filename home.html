@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    body{
+        -color: #9F8BFF;
+        background-size: cover;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    header {
+        background-color:rgb(11, 10, 11);
+        color: white;
+        padding: 15px 35px;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .logo {
+        font-size: 20px;
+        text-align: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .logo a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav {
+    text-align: right;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.4s ease;
+    }
+
+    nav ul li a:hover {
+        color: #666;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
+    .intro-container {
+
+        text-align: center;
+        margin: 100px auto;
+        padding: 20px;
+        max-width: 600px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+    body {
+            background-image: url("/static/fbc.png");
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li:before {
+            content: '\2022'; /* Unicode character for a bullet point */
+            color: black; /* You can change the color if needed */
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+        .parallax2 {
+            background-image: url('/static/fbc.jpeg');
+            margin-top:0px;
+            min-height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .main {
+            background-color: #c5e0e8;
+            /*background-color: rgba(245, 245, 245);*/
+            font-size: 20px;
+            font-weight: 100;
+            padding: 1em;
+        }
+        footer {
+            height: 55px;
+            background-color: #73b7c9dd;
+            font-size: 15px;
+            padding: 1em;
+            text-align: center;
+            position: static;
+            padding-bottom: 2em;
+        }
+    </style>
+</head>
+<header>
+    <div class="logo">
+        <a href="{{ url_for('start') }}">DYSLEXIA PREDICTOR</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('start') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="parallax2"></div>
+    <div class="main">
+        <h3>Dyslexia</h3>
+
+        Dyslexia is a language processing disorder that impacts reading, writing, and comprehension. Dyslexics may
+        exhibit
+        difficulty decoding words or with phonemic awareness, identifying individual sounds within words. Dyslexia often
+        goes diagnosed for many years and often results in trouble with reading, grammar, reading comprehension, and
+        other
+        language skills.
+
+        <h3>Signs and Symptoms</h3>
+        Dyslexia impacts people in different ways. So, symptoms might not look the same from one person to another. A
+        key
+        sign of dyslexia is trouble decoding words. This is the ability to match letters to sounds. Kids can also
+        struggle
+        with a more basic skill called phonemic awareness. This is the ability to recognize the sounds in words. Trouble
+        with phonemic awareness can show up as early as preschool.
+
+        <h3>Possible Causes of Dyslexia</h3>
+        Researchers haven't yet pinpointed exactly what causes dyslexia. But they do know that genes and brain
+        differences
+        play a role. Here are some of the possible causes of dyslexia:<br>
+        <ul>
+            <li>
+                <b>Genes and heredity:</b> Dyslexia often runs in families. About 40 percent of siblings of people with
+                dyslexia also
+                struggle with reading. As many as 49 percent of parents of kids with dyslexia have it, too. Scientists
+                have also
+                found genes linked to problems with reading and processing language.
+            </li><br>
+            <li>
+                <b>Brain anatomy and activity:</b> Brain imaging studies have shown brain differences between people
+                with and without
+                dyslexia. These differences happen in areas of the brain involved with key reading skills. Those skills
+                are
+                knowing how sounds are represented in words, and recognizing what written words look like.
+            </li>
+        </ul>
+    </div>
+    <footer>
+        2021 WEBpredictor<br>
+        All rights reserved<br>
+        Issued in public interest<br>
+        WEBpredictor does not provide any medical advice, diagnosis or treatment.<br><br>
+    </footer>
+
+
+<body>
+
+
+
+
+
+</body>
+</html>
